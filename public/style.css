@@ -1,0 +1,303 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+.login-bg {
+    background: url("bg.png") no-repeat center center/cover;
+    height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* LOGIN CARD */
+/* FLOATING + GLOSSY LOGIN/REGISTER CARD */
+.login-container {
+    width: 850px;
+    height: 480px;
+    margin: 100px auto;
+    display: flex;
+    overflow: hidden;
+
+    /* Glossy Glass Effect */
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    /* Floating Shadow */
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+
+    /* Floating Animation */
+    animation: floatBox 4s ease-in-out infinite;
+}
+
+/* Soft Floating Animation */
+@keyframes floatBox {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+
+.login-left {
+    width: 50%;
+    position: relative;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+}
+
+.side-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: rgb(10, 10, 10);
+}
+
+.welcome-text h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.welcome-text p {
+    font-size: 14px;
+}
+
+.login-right {
+    width: 50%;
+    padding: 40px;
+    position: relative;
+
+    /* Glossy shine */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+
+    box-shadow: inset 0 0 40px rgba(255,255,255,0.15);
+}
+
+
+.close-btn {
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+.login-right h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-right input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.forgot {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    color: #0066cc;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.btn-login {
+    width: 100%;
+    background: linear-gradient(135deg, #0095ff, #0066ff);
+    border: none;
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 10px 28px rgba(0, 140, 255, 0.45);
+    transition: 0.3s ease;
+}
+
+.btn-login:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(0, 140, 255, 0.55);
+}
+
+
+.btn-login:hover {
+    background: #007acc;
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 15px;
+}
+/* HOME HERO SECTION */
+.home-hero {
+    text-align: center;
+    margin-top: 120px;
+    color: white;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+.home-hero h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.home-hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn-big {
+    padding: 15px 30px;
+    background: white;
+    color: #007bff;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-big:hover {
+    background: #e6e6e6;
+}
+/* PREMIUM GLASSMORPHISM CONTENT BOX */
+.dashboard-hero {
+    max-width: 950px;
+    margin: 150px auto 80px;
+    padding: 50px 45px;
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.40);
+
+    text-align: center;
+    animation: fadeUp 0.8s ease-out;
+}
+
+/* Heading */
+.dashboard-hero h1 {
+    font-size: 48px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.6);
+}
+
+/* Paragraph */
+.dashboard-hero p {
+    font-size: 20px;
+    color: #f1f1f1;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: auto;
+    opacity: 0.95;
+}
+
+/* Fade-Up Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Dashboard Buttons */
+.dash-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dash-btn {
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #0095ff, #0066ff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: 0.2s ease;
+}
+
+.dash-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+.login-right input {
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: white;
+    font-size: 16px;
+}
+
+.login-right input::placeholder {
+    color: #e6e6e6;
+}
+
+.login-right input:focus {
+    outline: none;
+    border: 1px solid #00aaff;
+    box-shadow: 0 0 10px rgba(0, 150, 255, 0.6);
+}

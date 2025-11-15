@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-bg">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">MY-Auth</div>
+
+        <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li><a href="/courses.html">Courses</a></li>
+            <li><a href="/about.html">About us</a></li>
+            <li><a href="/contact.html">Contact us</a></li>
+        </ul>
+
+        
+    </nav>
+
+    <!-- LOGIN CONTAINER -->
+    <div class="login-container">
+        <div class="login-left">
+            <img src="we.png" class="side-img">
+            <div class="welcome-text">
+                <h2>Welcome Back</h2>
+                <p>Please log in using your personal information to stay connected with us.</p>
+            </div>
+        </div>
+
+        <div class="login-right">
+            <span class="close-btn">&times;</span>
+            <h2>LOGIN</h2>
+
+            <form action="/login" method="POST">
+                <input type="email" name="username" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+
+                <a href="#" class="forgot">Forgot password?</a>
+
+                <button type="submit" class="btn-login">Log In</button>
+            </form>
+
+            <p class="signup-text">Don't have an account?
+                <a href="/register.html">Signup</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

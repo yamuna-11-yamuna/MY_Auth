@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    fetch("/api/user")
+        .then(res => res.json())
+        .then(data => {
+            if (data.loggedIn) {
+                document.getElementById("welcomeText").innerHTML =
+                    `Welcome, ${data.username} 👋`;
+            } else {
+                window.location.href = "/login.html";
+            }
+        });
+</script>
+
+<body class="login-bg">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">My-Auth</div>
+
+        <ul class="nav-links">
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li><a href="/courses.html">Courses</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+
+        <a href="/logout"><button class="nav-btn">Logout</button></a>
+    </nav>
+
+    <!-- DASHBOARD SECTION -->
+    <div class="dashboard-hero">
+       <h1 id="welcomeText">Welcome to Your Dashboard 👋</h1>
+
+        <p>You successfully logged in. Choose an option below to continue.</p>
+
+        <div class="dash-buttons">
+            <a href="/portfolio.html"><button class="dash-btn">Portfolio</button></a>
+            <a href="/courses.html"><button class="dash-btn">Courses</button></a>
+            <a href="/about.html"><button class="dash-btn">About Us</button></a>
+            <a href="/contact.html"><button class="dash-btn">Contact Us</button></a>
+        </div>
+    </div>
+
+</body>
+</html>
